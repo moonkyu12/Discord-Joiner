@@ -169,7 +169,6 @@ async function main() {
         continue;
       }
 
-      // 브라우저 내부 팝업 단추 대응
       const btnSelector = 'button[type="button"], button';
       const buttons = await page.$$(btnSelector);
 
@@ -184,9 +183,6 @@ async function main() {
 
       await sleep(4000);
 
-      // console.log(` └ 🔍 내부 화면 상태 점검 및 실시간 감시 대기 모드로 진입합니다.`);
-      
-      // 수동 처리 및 결과 판독을 위한 모니터링 폴링 루프
       for (let check = 0; check < 120; check++) {
         await sleep(5000);
         
